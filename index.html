@@ -15,6 +15,8 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -24,16 +26,123 @@
 
 <body>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <header class="header flex-container width-full">
+    <!-- will use this wrapper to reduce width after breakpoints -->
+    <div class="header__wrapper">
+      <img src="img/unpluggedlogo.png" alt="Unplugged logo" class="header__logo">
+      <div class="header__divider"></div>
+      <nav class="nav flex-container">
+        <ul>
+          <li class="nav__item">FAQ</li>
+          <li class="nav__item">About</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <h1 class="hero__heading">Retreat from the desk, return refreshed.</h1>
+    </section>
+
+    <section class="signup flex-container">
+      <div class="signup__copy">
+        <h3>Want to join the next retreat?</h3>
+        <p>Find out when we are holding our next retreat and how your company or team can sign up!</p>
+      </div>
+      <div class="signup__form">
+        <h3>Find out more</h3>
+        <input type="text" value="name@email.com">
+        <input type="button" value="Download Itinerary">
+      </div>
+    </section>
+
+    <section class="features-section width-full">
+      <div class="wrapper width-almost">
+        <h2 class="features-section__heading"></h2>
+        <div class="features-section__list flex-container">
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+          <div class="features-section__item">
+            <i></i>
+            <p class="features-section__item-description"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section width-full">
+      <div class="flex-container width-almost">
+        <h2 class="review-section__heading"></h2>
+        <img src="" alt="">
+        <article class="review">
+          <h3 class="review__heading"></h3>
+          <p class="review__copy"></p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="width-full">
+    <section class="connect flex-container width-almost">
+      <div class="contact">
+        <h3 class="connect__heading"></h3>
+        <address>
+          <p></p>
+        </address>
+      </div>
+      <h3 class="connect__heading"></h3>
+      <div class="social flex-container">
+        <p class="social__icon"></p>
+        <p class="social__icon"></p>
+        <p class="social__icon"></p>
+      </div>
+    </section>
+
+    <div class="copyright text-center">
+      <p></p>
+    </div>
+
+  </footer>
+<!-- TODO: Finish adding copy and images.  -->
+<!-- TODO: Consider: If .width-full is only applied to   block elements, they may already be 100%, so this class might be redundant.  -->
+
+
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.ga = function() {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('set', 'anonymizeIp', true);
+    ga('set', 'transport', 'beacon');
+    ga('send', 'pageview')
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
 </body>

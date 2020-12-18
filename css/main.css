@@ -113,30 +113,323 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-p {}
+/* || Base Styles */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-.wrapper {}
+html {
+  font-size: 10px;
+  line-height: 1.2;
+}
 
-.flex-container {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  color: #e2e3ed;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: normal;
+
+  margin: 0;
+}
+h1 { font-size: 3.6rem; }
+h2 { font-size: 3rem; }
+h3, h4 { font-size: 1.8rem;}
+
+p {
+  line-height: 1.3;
+  font-weight: normal;
+}
+
+ol, ul {
+
+}
+
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+a:visited {
+  color: #d4bbac;
+  /* What does :link pseudoclass change about a? If I omit a:visited, the addition of :link to <a> causes visited links to display purple, but if I leave the :link pseudoclass out of the selector for <a>, there is no displayed changes to visited links.
+  Partial answer: a:link specifically selects <a> tags that have an href. (Which makes me ask, what is an <a> tag without an href?)*/
+}
+a:hover, a:focus {
+  color: #b9a485;
+  text-decoration: underline;
+}
+a:active {
+  color: #97b985;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* || Typography */
+
+
+/* || Sitewide */
+
+/* HEADER */
+.header {
+  background-color: #202322;
+}
+
+.header__wrapper {
+  width: 100%;
+
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
   -ms-align-items: center;
   align-items: center;
 }
+.header__logo {
+  width: clamp(10rem, 60%, 30rem);
+  margin: 1em auto;
+}
+.header__divider {
+  border-top: solid 1px #3a3a3a;
+}
+.header__nav {
+  margin: 1em 0;
 
-/* This percentage will vary after breakpoints. */
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.header__nav-ul {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  list-style: none;
+  text-transform: uppercase;
+}
+.header__nav-item + .header__nav-item {
+  margin-left: 5rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: #202322;
+}
+.connect {
+  margin: 0 auto;
+  padding-top: 4rem;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+.contact, .social {
+  padding-bottom: 4rem;
+}
+.contact address {
+  font-style: normal;
+}
+.connect__heading {
+  padding-bottom: 1.7rem;
+}
+.social__flex-container {
+  width: 20rem;
+  margin: 0 auto;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.social__icon {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
+  background-color: #527158;
+  width: 4rem; /*
+  Combines with line-height of <i> child to make equal dimensions for circle */
+  border-radius: 2rem;
+}
+.social__icon i {
+  font-size: 1.8rem;
+  line-height: 4rem; /*
+  Pushes icon to center of div and ensures div min-height of 4rem. */
+}
+
+.copyright {
+  padding-bottom: 1rem;
+}
+/* || HOMEPAGE (mobile) */
+/* Hero section (mobile) */
+.hero {
+  height: 50rem;
+
+  background: darkgreen url(../img/hero.jpg) no-repeat center;
+  background-size: cover;
+
+  /* Necessary to center inline-block child. */
+  text-align: center;
+}
+.hero__heading {
+  display: inline-block;
+  margin-top: 50px;
+
+  text-align: left;
+}
+
+/* Signup section (mobile) */
+.signup {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 5rem;
+  background: #527158;
+}
+.signup__wrapper {
+  /* Keeps section looking nice at intermediate browser sizes. */
+  max-width: 45rem;
+}
+.signup__copy, .signup__form {
+  margin-top: 2.4rem;
+}
+.signup__copy p {
+  margin-top: 1.2rem;
+}
+.signup__heading {
+  font-size: 1.8rem;
+}
+.signup__form input {
+  width: 100%;
+}
+.signup__form ::placeholder {
+  color: #9d9ea4;
+  font-style: italic;
+}
+.signup__form input[type=email] {
+  box-sizing: border-box;
+  padding: 1.6rem;
+  margin: 1.8rem 0;
+}
+.signup__form input[type=button] {
+  padding: 15px 0;
+  border: none;
+
+  background-color: #2a423a;
+  color: #e2e3ed;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Features section (mobile) */
+.features-section {
+  background: #282118 url(../img/campsite.jpg) center no-repeat;
+  background-size: cover;
+}
+.features-section__wrapper {
+  margin: 0 auto;
+  padding: 4.5rem 0 6rem;
+  max-width: 55rem;
+}
+.features-section__heading {
+  /* TODO: Unnecessary class? */
+}
+.features-section__list {
+  width: 20rem;
+  height: 115rem;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 0 auto;
+}
+.features-section__item i {
+  font-size: 5.8rem;
+  padding: 4.3rem 0;
+
+}
+.features-section__item-description {
+  /* TODO: Unnecessary class? */
+}
+
+/* Review section (mobile) */
+.review-section {
+  background-color: #2a423a;
+}
+.review-section__flex-container {
+  margin: 0 auto;
+  padding: 4rem 0;
+  max-width: 45rem;
+
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.review-section__heading {
+  padding-bottom: 2.7rem;
+}
+.review-section__img, .review__heading {
+  padding-bottom: 1.8rem;
+}
+/* || FAQ (mobile) */
+/* || ABOUT (mobile) */
+
+.column-to-row {
+  /* REMOVE placeholder in CSS and HTML */
+}
+
+.flex-container {
+  /* REMOVE placeholder in CSS and HTML */
+}
+
+.text-center {
+  text-align: center;
+}
+
 .width-almost {
   width: 90%;
+  /* This percentage will vary after breakpoints. */
 }
 
 .width-full {
   width: 100%;
 }
+
 
 /*
  * Hide visually and from screen readers
@@ -214,16 +507,23 @@ p {}
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+/* TABLET STYLES */
 
-@media print,
-(-webkit-min-device-pixel-ratio: 1.25),
-(min-resolution: 1.25dppx),
-(min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
+/* || HOMEPAGE (tablet) */
+
+/* || FAQ (tablet) */
+
+/* || ABOUT (tablet) */
+
+
+/* DESKTOP STYLES */
+
+/* || HOMEPAGE (desktop) */
+
+/* || FAQ (desktop) */
+
+/* || ABOUT (desktop) */
+
 
 /* ==========================================================================
    Print styles.

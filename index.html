@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <title>Unplugged</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,9 +14,9 @@
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <script src="https://kit.fontawesome.com/ecbf0bfe9d.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
@@ -26,15 +26,19 @@
 
 <body>
 
-  <header class="header flex-container width-full">
-    <!-- will use this wrapper to reduce width after breakpoints -->
-    <div class="header__wrapper">
-      <img src="img/unpluggedlogo.png" alt="Unplugged logo" class="header__logo">
-      <div class="header__divider"></div>
-      <nav class="nav flex-container">
-        <ul>
-          <li class="nav__item">FAQ</li>
-          <li class="nav__item">About</li>
+  <header class="header width-full">
+    <div class="header__wrapper flex-container column-to-row">
+      <!-- will use this wrapper to reduce width after breakpoints -->
+      <!-- add .block-center class, or just add margin:0 auto to .header__wrapper? -->
+      <a href="#" class="header__logo">
+        <img src="img/unpluggedlogo.png" alt="Unplugged logo">
+      </a>
+      <div class="header__divider width-full"></div>
+      <nav class="header__nav">
+        <ul class="flex-container header__nav-ul">
+          <!-- TODO: turn these into links -->
+          <li class="header__nav-item"><a href="faq/index.html">FAQ</a></li>
+          <li class="header__nav-item"><a href="about/index.html">About</a></li>
         </ul>
       </nav>
     </div>
@@ -42,90 +46,107 @@
 
   <main>
 
-    <section class="hero">
-      <h1 class="hero__heading">Retreat from the desk, return refreshed.</h1>
+    <section class="hero width-full">
+      <h1 class="hero__heading width-almost">Retreat from the desk, return refreshed.</h1>
     </section>
 
-    <section class="signup flex-container">
-      <div class="signup__copy">
-        <h3>Want to join the next retreat?</h3>
-        <p>Find out when we are holding our next retreat and how your company or team can sign up!</p>
-      </div>
-      <div class="signup__form">
-        <h3>Find out more</h3>
-        <input type="text" value="name@email.com">
-        <input type="button" value="Download Itinerary">
+    <section class="signup flex-container column-to-row">
+      <div class="signup__wrapper width-almost">
+        <div class="signup__copy">
+          <h3 class="signup__heading">Want to join the next retreat?</h3>
+          <p>Find out when we are holding our next retreat and how your company or team can sign up!</p>
+        </div>
+        <div class="signup__form">
+          <h3 class="signup__heading">Find out more</h3>
+          <input type="email" placeholder="name@email.com">
+          <input type="button" value="Get Our Itinerary">
+        </div>
       </div>
     </section>
 
     <section class="features-section width-full">
-      <div class="wrapper width-almost">
-        <h2 class="features-section__heading"></h2>
-        <div class="features-section__list flex-container">
+      <div class="features-section__wrapper width-almost">
+        <h2 class="features-section__heading">Have the work week you always dreamed of — without the bad wifi.</h2>
+        <div class="features-section__list text-center flex-container column-to-row">
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-campground"></i>
+            <p class="features-section__item-description">Located in a peaceful bungalow outside of Lake Geneva, Wisconsin. </p>
           </div>
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-bed"></i>
+            <p class="features-section__item-description">12 private rooms with ensuite bathrooms, 2 group meeting rooms, and 4 breakout rooms.</p>
           </div>
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-utensils"></i>
+            <p class="features-section__item-description">Private chef team providing on demand meals - just like your team kitchen.</p>
           </div>
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-shoe-prints"></i>
+            <p class="features-section__item-description">5 outdoor obstacle courses, including private beach ½ mile from bungalow.</p>
           </div>
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-smile-beam"></i>
+            <p class="features-section__item-description">Retreat facilitator to manage your day to day activities so you all get a chance to reset.</p>
           </div>
           <div class="features-section__item">
-            <i></i>
-            <p class="features-section__item-description"></p>
+            <i class="fas fa-wifi"></i>
+            <p class="features-section__item-description">Dedicated computer room for times that you must wifi.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="review-section width-full">
-      <div class="flex-container width-almost">
-        <h2 class="review-section__heading"></h2>
-        <img src="" alt="">
+      <div class="review-section__flex-container column-to-row width-almost">
+        <h2 class="review-section__heading">Be a better team in 5 days, like this one.</h2>
+        <img class="review-section__img" src="img/team.jpg" alt="Group of smiling people standing together outside">
         <article class="review">
-          <h3 class="review__heading"></h3>
-          <p class="review__copy"></p>
+          <h3 class="review__heading">LaCrue Bottling Co.<br>October 2017</h3>
+          <p class="review__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
         </article>
       </div>
     </section>
 
   </main>
 
-  <footer class="width-full">
-    <section class="connect flex-container width-almost">
+  <footer class="footer width-full">
+    <section class="connect flex-container column-to-row width-almost">
       <div class="contact">
-        <h3 class="connect__heading"></h3>
+        <h3 class="connect__heading">Contact</h3>
         <address>
-          <p></p>
+          <p>555-555-5555<br>hello@unplugged.com</p>
         </address>
       </div>
-      <h3 class="connect__heading"></h3>
-      <div class="social flex-container">
-        <p class="social__icon"></p>
-        <p class="social__icon"></p>
-        <p class="social__icon"></p>
+      <div class="social">
+        <h3 class="connect__heading">Social</h3>
+        <div class="social__flex-container">
+          <div class="social__icon">
+            <a href="https://www.facebook.com/Skillcrush/" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+          <div class="social__icon">
+            <a href="https://twitter.com/Skillcrush" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+          <div class="social__icon">
+            <a href="https://www.instagram.com/skillcrush" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
     <div class="copyright text-center">
-      <p></p>
+      <p>Copyright 2019 | Unplugged</p>
     </div>
 
   </footer>
-<!-- TODO: Finish adding copy and images.  -->
-<!-- TODO: Consider: If .width-full is only applied to   block elements, they may already be 100%, so this class might be redundant.  -->
+  <!-- TODO: Finish adding copy and images.  -->
+  <!-- TODO: Consider: If .width-full is only applied to block elements, they may already be 100%, so this class might be redundant.  -->
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>

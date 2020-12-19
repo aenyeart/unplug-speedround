@@ -9,7 +9,7 @@ form/social icons/mission light forest green #527158
 hero brown #5a4e3d
 features dk brown #282118
 review dk green #2a423a
-form input light grey #9d9ea4
+form input placeholder light grey #9d9ea4
 
 NOTES:
 >
@@ -22,7 +22,7 @@ NOTES:
       HEADER & FOOTER
       HOMEPAGE
           HERO
-          ASIDE/FORM
+          SIGNUP
           FEATURES
           REVIEWS
       ABOUT PAGE
@@ -205,6 +205,7 @@ img {
 
 .header__divider {
   border-top: solid 1px #3a3a3a;
+  width: 100%;
 }
 
 .header__nav {
@@ -294,7 +295,7 @@ img {
 /* Hero section (mobile) */
 .hero {
   height: 50rem;
-  background: darkgreen url(../img/hero.jpg) no-repeat center;
+  background: #2a423a url(../img/hero.jpg) no-repeat center;
   background-size: cover;
   /* Necessary to center inline-block child. */
   text-align: center;
@@ -335,7 +336,7 @@ img {
 }
 
 .signup__heading {
-/* unnecessary class? */
+/* TODO: Unnecessary class? */
 }
 
 .signup__form input {
@@ -378,10 +379,6 @@ img {
   margin: 0 auto;
   padding: 4.5rem 0 6rem;
   max-width: 55rem;
-}
-
-.features-section__heading {
-  /* TODO: Unnecessary class? */
 }
 
 .features-section__list {
@@ -433,25 +430,13 @@ img {
 
 /* || FAQ (mobile) */
 /* || ABOUT (mobile) */
-.column-to-row {
-  /* REMOVE placeholder in CSS and HTML */
-}
-
-.flex-container {
-  /* REMOVE placeholder in CSS and HTML */
-}
 
 .text-center {
   text-align: center;
 }
-
 .width-almost {
   width: 90%;
   /* This percentage will vary after breakpoints. */
-}
-
-.width-full {
-  width: 100%;
 }
 
 /*

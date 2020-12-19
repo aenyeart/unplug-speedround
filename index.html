@@ -26,17 +26,16 @@
 
 <body>
 
-  <header class="header width-full">
-    <div class="header__wrapper flex-container column-to-row">
+  <header class="header">
+    <div class="header__wrapper">
       <!-- will use this wrapper to reduce width after breakpoints -->
       <!-- add .block-center class, or just add margin:0 auto to .header__wrapper? -->
       <a href="#" class="header__logo">
         <img src="img/unpluggedlogo.png" alt="Unplugged logo">
       </a>
-      <div class="header__divider width-full"></div>
+      <div class="header__divider"></div>
       <nav class="header__nav">
-        <ul class="flex-container header__nav-ul">
-          <!-- TODO: turn these into links -->
+        <ul class="header__nav-ul">
           <li class="header__nav-item"><a href="faq/index.html">FAQ</a></li>
           <li class="header__nav-item"><a href="about/index.html">About</a></li>
         </ul>
@@ -46,11 +45,11 @@
 
   <main>
 
-    <section class="hero width-full">
+    <section class="hero">
       <h1 class="hero__heading width-almost">Retreat from the desk, return refreshed.</h1>
     </section>
 
-    <section class="signup flex-container column-to-row">
+    <section class="signup">
       <div class="signup__wrapper width-almost">
         <div class="signup__copy">
           <h3 class="signup__heading">Want to join the next retreat?</h3>
@@ -64,7 +63,7 @@
       </div>
     </section>
 
-    <section class="features-section width-full">
+    <section class="features-section">
       <div class="features-section__wrapper width-almost">
         <h2 class="features-section__heading">Have the work week you always dreamed of — without the bad wifi.</h2>
         <div class="features-section__list text-center">
@@ -96,8 +95,8 @@
       </div>
     </section>
 
-    <section class="review-section width-full">
-      <div class="review-section__flex-container column-to-row width-almost">
+    <section class="review-section">
+      <div class="review-section__flex-container width-almost">
         <h2 class="review-section__heading">Be a better team in 5 days, like this one.</h2>
         <img class="review-section__img" src="img/team.jpg" alt="Group of smiling people standing together outside">
         <article class="review">
@@ -109,8 +108,8 @@
 
   </main>
 
-  <footer class="footer width-full">
-    <section class="connect flex-container">
+  <footer class="footer">
+    <section class="connect">
       <div class="contact">
         <h3 class="connect__heading">Contact</h3>
         <address>
@@ -144,8 +143,6 @@
     </div>
 
   </footer>
-  <!-- TODO: Finish adding copy and images.  -->
-  <!-- TODO: Consider: If .width-full is only applied to block elements, they may already be 100%, so this class might be redundant.  -->
 
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
